@@ -381,3 +381,66 @@
     height: 1.5rem;
   }
 }
+
+.section-pricing {
+  @include section;
+  border-top: 1px solid $b-0;
+  border-bottom: 1px solid $b-0;
+  padding: 5rem 0 3.5rem 0;
+  &__container {
+    @include container;
+    justify-content: space-between;
+  }
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__tab {
+    font-size: $fs-8;
+    color: $b-0;
+  }
+  &__logo {
+    width: 188.99px;
+    height: 40px;
+  }
+}
+
+.footer {
+  @include section;
+  &__container {
+    @include container;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+
+    color: $b-0;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  &__rights {
+    padding: 1.25rem 5rem 1.25rem 0;
+    gap: 1.25rem;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: flex-start;
+    flex: 2 0 auto;
+    gap: 1.25rem;
+  }
+  &__tab {
+    padding: 1.25rem;
+  }
+  &__back {
+    display: flex;
+    justify-content: center;
+    gap: 0.875rem;
+  }
+  &__backup {
+    padding: 1.25rem 0;
+    text-align: end;
+  }
+  &__icon-up {
+    padding: 1.25rem 0;
+  }
+}

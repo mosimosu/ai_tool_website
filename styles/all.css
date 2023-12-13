@@ -547,4 +547,81 @@ table {
 .section-start__icon {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.section-pricing {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 5rem 0 3.5rem 0;
+}
+.section-pricing__container {
+  width: 67.5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+}
+.section-pricing__tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.section-pricing__tab {
+  font-size: 5rem;
+  color: #ffffff;
+}
+.section-pricing__logo {
+  width: 188.99px;
+  height: 40px;
+}
+
+.footer {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__container {
+  width: 67.5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.footer__rights {
+  padding: 1.25rem 5rem 1.25rem 0;
+  gap: 1.25rem;
+}
+.footer__tabs {
+  display: flex;
+  justify-content: flex-start;
+  flex: 2 0 auto;
+  gap: 1.25rem;
+}
+.footer__tab {
+  padding: 1.25rem;
+}
+.footer__back {
+  display: flex;
+  justify-content: center;
+  gap: 0.875rem;
+}
+.footer__backup {
+  padding: 1.25rem 0;
+  text-align: end;
+}
+.footer__icon-up {
+  padding: 1.25rem 0;
 }/*# sourceMappingURL=all.css.map */
