@@ -1,0 +1,383 @@
+.bg-color {
+  background-color: $b-100;
+}
+.section-nav {
+  @include section;
+  &__container {
+    @include container;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: auto;
+    height: 40px;
+    margin: 1.2rem;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1.5rem;
+    width: 100%;
+    color: $b-0;
+    gap: 1.5rem;
+  }
+  &__tab {
+    width: auto;
+    height: auto;
+  }
+}
+
+.section-hero {
+  @include section;
+  &__container {
+    @include container;
+    display: block;
+  }
+  &__caption {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+  }
+  &__caption-text {
+    width: 100%;
+    height: auto;
+    font-size: $fs-10;
+    color: $b-0;
+  }
+  &__caption-btn {
+    border: 1px solid $b-0;
+    background-color: $b-100;
+    color: $b-0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin-top: 1.2rem;
+    line-height: 1.5rem;
+    gap: 10px;
+    cursor: pointer;
+  }
+  &__deco {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    flex: 1;
+  }
+}
+
+.section-strength {
+  @include section;
+
+  &__container {
+    @include container;
+    display: block;
+  }
+  &__caption {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+    width: 100%;
+    color: $b-0;
+    &--sub {
+      width: 40%;
+      font-size: $fs-5;
+    }
+    &--main {
+      width: 60%;
+      font-size: $fs-7;
+    }
+  }
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-top: 5rem;
+    gap: 0.8rem;
+  }
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    width: (100%/3);
+    border: 1px solid $b-0;
+    padding: 5rem 2.5rem;
+    border: 1px solid $b-80;
+    border-radius: 1rem;
+
+    color: $b-0;
+  }
+  &__card-img {
+    width: 5rem;
+    height: 5rem;
+  }
+  &__card-caption {
+    font-size: 2rem;
+    margin-top: 0.8rem;
+  }
+  &__card-text {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+}
+
+.section-review {
+  @include section;
+
+  &__container {
+    @include container;
+    display: block;
+  }
+  &__caption {
+    color: $b-0;
+    font-size: $fs-5;
+  }
+  &__partners {
+  }
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    color: $b-0;
+    width: 100%;
+    gap: 1.25rem;
+  }
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: (100%/3);
+    padding: 2.5rem;
+    border-radius: 1rem;
+  }
+  &__ranks {
+  }
+  &__star {
+    width: 1rem;
+    height: 1rem;
+  }
+  &__cmt {
+    margin-top: 1.25rem;
+    height: 215px;
+  }
+  &__contact {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  &__contact-pic {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1.25rem;
+  }
+  &__contact-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 1.25rem;
+    gap: 0.25rem;
+  }
+  &__contact-name {
+  }
+  &__contact-co {
+    font-size: $fs-m-1;
+  }
+}
+
+.section-portfolio {
+  @include section;
+  background-color: $b-0;
+  border-radius: 10rem;
+  &__container {
+    @include container;
+    flex-direction: column;
+  }
+  &__caption {
+    font-size: $fs-8;
+    color: $b-100;
+    font-weight: bold;
+    line-height: 6rem;
+    margin-top: 10rem;
+  }
+  &__search {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin-top: 5rem;
+    padding: 1.25rem 2.5rem;
+    background-color: $b-20;
+    border-radius: 1rem;
+    gap: 0.75rem;
+  }
+  &__searchbar-icon {
+    width: 1.5rem;
+  }
+  &__searchbar {
+    width: 100%;
+    height: 1rem;
+    font-size: 1rem;
+    background-color: $b-20;
+    border: none;
+  }
+  &__sort {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 1.5rem;
+  }
+  &__filter,
+  &__order {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 2rem 1.25rem 2.5rem;
+    border: 1px solid $b-20;
+    border-radius: 1rem;
+    gap: 1.5rem;
+  }
+  &__filter-text {
+    font-size: 1rem;
+  }
+
+  &__genre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $b-60;
+    font-size: 1rem;
+
+    gap: 1.5rem;
+  }
+  &__genre-option {
+    padding: 0.5rem 1rem;
+    &:hover {
+      color: $b-100;
+      cursor: pointer;
+    }
+  }
+  &__order {
+    gap: 1.25rem;
+  }
+  &__order-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  &__pages {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 0.25rem;
+    margin-top: 2.5rem;
+  }
+  &__page {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    font-size: $fs-m-1;
+    font-weight: 700;
+    color: $b-100;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% / 3 - 1.5rem);
+    height: 100%;
+    border: 1px solid $b-20;
+    border-radius: 1rem;
+  }
+  &__card-img {
+    width: 100%;
+    height: 312px;
+    border-radius: $fs-1 $fs-1 0 0;
+  }
+  &__card-top {
+    display: flex;
+    flex-direction: column;
+    height: 118px;
+    padding: 1.5rem 2rem;
+    gap: 0.75rem;
+  }
+  &__card-caption {
+    font-size: $fs-2;
+    font-weight: 900;
+  }
+  &__card-info {
+    display: flex;
+
+    font-size: $fs-m-1;
+    color: $b-80;
+  }
+  &__card-mid,
+  &__card-btm {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $b-20;
+    padding: 1.5rem 2rem;
+  }
+  &__card-mid-1 {
+    font-size: $fs-1;
+    font-weight: 700;
+  }
+  &__card-mid-2 {
+    font-size: $fs-1;
+  }
+  &__card-btm-1 {
+    font-size: $fs-1;
+  }
+}
+
+.section-start {
+  @include section;
+  &__container {
+    @include container;
+    flex-direction: column;
+    align-items: center;
+    color: $b-0;
+  }
+  &__caption {
+    font-size: 3rem;
+    color: $b-0;
+    margin-top: 5rem;
+    text-align: center;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    width: 188px;
+    border-radius: 1rem;
+    border: 1px solid $b-0;
+    padding: 1.25rem 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+    background-color: $b-100;
+    color: $b-0;
+    gap: 1rem;
+  }
+  &__btn-text {
+    font-size: 1.25rem;
+    font-weight: 900;
+  }
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

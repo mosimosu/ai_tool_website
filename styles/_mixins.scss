@@ -1,0 +1,14 @@
+@mixin section {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin container {
+  width: 67.5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
