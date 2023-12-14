@@ -90,6 +90,7 @@ video {
   font: inherit;
   vertical-align: baseline;
   line-height: 1.2;
+  color: #ffffff;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -988,4 +989,19 @@ table {
 }
 .footer__icon-up {
   padding: 1.25rem 0;
+}
+
+.section-pricing-hero {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-pricing-hero__container {
+  width: 67.5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }/*# sourceMappingURL=all.css.map */

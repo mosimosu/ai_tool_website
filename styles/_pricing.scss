@@ -1,0 +1,6 @@
+.section-pricing-hero {
+  @include section;
+  &__container {
+    @include container;
+  }
+}
