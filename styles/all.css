@@ -1023,7 +1023,7 @@ table {
 .section-pricing-main__caption {
   font-size: 120px;
   font-weight: 900;
-  text-wrap: nowrap;
+  overflow-wrap: nowrap;
 }
 .section-pricing-main__text {
   font-size: 48px;
