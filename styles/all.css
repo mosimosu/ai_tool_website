@@ -991,14 +991,14 @@ table {
   padding: 1.25rem 0;
 }
 
-.section-pricing-hero {
+.section-pricing-main {
   width: 100vw;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.section-pricing-hero__container {
+.section-pricing-main__container {
   width: 67.5%;
   height: 100%;
   display: flex;
@@ -1006,21 +1006,140 @@ table {
   margin-bottom: 1.5rem;
   flex-direction: column;
 }
-.section-pricing-hero__caption-1 {
+.section-pricing-main__row {
   display: flex;
-  justify-content: space-between;
 }
-.section-pricing-hero__caption-2 {
+.section-pricing-main__row--1st {
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.section-pricing-main__row--2nd {
+  justify-content: flex-end;
+  padding-left: 40%;
+}
+.section-pricing-main__row--3rd {
+  justify-content: flex-start;
+}
+.section-pricing-main__caption {
   font-size: 120px;
   font-weight: 900;
   text-wrap: nowrap;
 }
-.section-pricing-hero__text {
+.section-pricing-main__text {
   font-size: 48px;
   font-weight: 900;
-  margin-top: 328px;
+  margin-top: 5rem;
 }
-.section-pricing-hero__deco {
+.section-pricing-main__deco {
   display: flex;
-  margin-top: 492px;
+  margin-top: 238px;
+}
+
+.section-pricing-sub {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+.section-pricing-sub__container {
+  width: 67.5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-direction: column;
+}
+.section-pricing-sub__caption {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.section-pricing-sub__cards {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  gap: 1.5rem;
+}
+.section-pricing-sub__card {
+  min-width: 632px;
+  border: 1px solid #ffffff;
+  border-radius: 1rem;
+}
+.section-pricing-sub__card-body {
+  min-height: 254px;
+  padding: 20px 32px 20px 32px;
+  border-bottom: 1px solid #ffffff;
+}
+.section-pricing-sub__card-caption {
+  font-size: 2rem;
+}
+.section-pricing-sub__card-items {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 12px;
+}
+.section-pricing-sub__card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 32px 20px 32px;
+}
+.section-pricing-sub__card-footer-price {
+  font-size: 20px;
+  color: #919191;
+}
+.section-pricing-sub__card-footer-price--bold {
+  color: #ffffff;
+  font-weight: 900;
+}
+.section-pricing-sub__card-footer-click {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.section-pricing-policy {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.section-pricing-policy__container {
+  width: 67.5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+}
+.section-pricing-policy__caption {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.section-pricing-policy__items {
+  display: flex;
+  flex-direction: column;
+}
+.section-pricing-policy__items-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ffffff;
+  padding: 0 0 40px 0;
+}
+.section-pricing-policy__item-title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.section-pricing-policy__item-text {
+  font-size: 2rem;
 }/*# sourceMappingURL=all.css.map */
