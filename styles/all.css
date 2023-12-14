@@ -1004,4 +1004,23 @@ table {
   display: flex;
   justify-content: center;
   margin-bottom: 1.5rem;
+  flex-direction: column;
+}
+.section-pricing-hero__caption-1 {
+  display: flex;
+  justify-content: space-between;
+}
+.section-pricing-hero__caption-2 {
+  font-size: 120px;
+  font-weight: 900;
+  text-wrap: nowrap;
+}
+.section-pricing-hero__text {
+  font-size: 48px;
+  font-weight: 900;
+  margin-top: 328px;
+}
+.section-pricing-hero__deco {
+  display: flex;
+  margin-top: 492px;
 }/*# sourceMappingURL=all.css.map */

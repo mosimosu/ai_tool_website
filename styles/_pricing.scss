@@ -2,5 +2,24 @@
   @include section;
   &__container {
     @include container;
+    flex-direction: column;
+  }
+  &__caption-1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__caption-2 {
+    font-size: 120px;
+    font-weight: 900;
+    text-wrap: nowrap;
+  }
+  &__text {
+    font-size: 48px;
+    font-weight: 900;
+    margin-top: 328px;
+  }
+  &__deco {
+    display: flex;
+    margin-top: 492px;
   }
 }
