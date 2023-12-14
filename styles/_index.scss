@@ -105,7 +105,11 @@
     flex: 1;
     @include mobile {
       margin-top: 11.25rem;
+      max-width: 100%;
     }
+  }
+  &__grace-img {
+    max-width: 100%;
   }
 }
 
@@ -181,7 +185,7 @@
     align-items: flex-start;
     flex-direction: column;
 
-    width: (100%/3);
+    max-width: (100%/3);
     border: 1px solid $b-0;
     padding: 5rem 2.5rem;
     border: 1px solid $b-80;
@@ -189,7 +193,7 @@
 
     color: $b-0;
     @include mobile {
-      width: 100%;
+      max-width: 100%;
       padding: 2.5rem 1.25rem;
     }
   }
@@ -227,9 +231,11 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 80px 0 160px 0;
     gap: 1.25rem;
     @include mobile {
       margin-top: 1.5rem;
+      margin-bottom: 48px;
       gap: 0.875rem;
     }
   }
@@ -253,7 +259,7 @@
     width: 100%;
     gap: 1.25rem;
     @include mobile {
-      visibility: hidden;
+      display: none;
     }
   }
   &__card {
@@ -264,8 +270,6 @@
     padding: 2.5rem;
     border-radius: 1rem;
   }
-  &__ranks {
-  }
   &__star {
     width: 1rem;
     height: 1rem;
@@ -273,11 +277,17 @@
   &__cmt {
     margin-top: 1.25rem;
     height: 215px;
+    @include mobile {
+      height: auto;
+    }
   }
   &__contact {
     display: flex;
     justify-content: flex-start;
     gap: 1rem;
+    @include mobile {
+      margin-top: 20px;
+    }
   }
   &__contact-pic {
     width: 3rem;
@@ -291,10 +301,38 @@
     margin-top: 1.25rem;
     gap: 0.25rem;
   }
-  &__contact-name {
-  }
   &__contact-co {
     font-size: $fs-m-1;
+  }
+  &__card-fake {
+    display: none;
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 100%;
+      color: $b-0;
+    }
+  }
+  &__card-dots {
+    display: none;
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+      gap: 8px;
+    }
+  }
+  &__card-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $b-0;
+    opacity: 20%;
+    &--active {
+      background-color: $b-0;
+      opacity: 1;
+    }
   }
 }
 
@@ -302,26 +340,57 @@
   @include section;
   background-color: $b-0;
   border-radius: 10rem;
+  @include mobile {
+    border-radius: 20px;
+  }
   &__container {
     @include container;
     flex-direction: column;
+    @include mobile {
+      @include container-sm;
+    }
   }
   &__caption {
-    font-size: $fs-8;
-    color: $b-100;
-    font-weight: bold;
-    line-height: 6rem;
-    margin-top: 10rem;
+    &--lg {
+      font-size: $fs-8;
+      color: $b-100;
+      font-weight: bold;
+      line-height: 6rem;
+      margin-top: 10rem;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--sm {
+      display: none;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 700;
+        padding: 0 3rem;
+        margin-top: 5rem;
+      }
+    }
   }
   &__search {
     display: flex;
     justify-content: center;
-    width: 95%;
+    max-width: 100%;
     margin-top: 5rem;
     padding: 1.25rem 2.5rem;
     background-color: $b-20;
     border-radius: 1rem;
     gap: 0.75rem;
+    @include mobile {
+      margin-top: 2rem;
+      width: auto;
+      max-width: 100%;
+    }
   }
   &__searchbar-icon {
     width: 1.5rem;
@@ -334,10 +403,29 @@
     border: none;
   }
   &__sort {
+    &--lg {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    &--sm {
+      display: none;
+    }
+    @include mobile {
+      &--lg {
+        display: none;
+      }
+      &--sm {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+  &__sort-sm {
     display: flex;
     justify-content: space-between;
-
-    margin-top: 1.5rem;
   }
   &__filter,
   &__order {
@@ -358,8 +446,13 @@
     align-items: center;
     color: $b-60;
     font-size: 1rem;
-
     gap: 1.5rem;
+    @include mobile {
+      align-items: flex-start;
+      gap: 0.5rem;
+      text-wrap: nowrap;
+      overflow: hidden;
+    }
   }
   &__genre-option {
     padding: 0.5rem 1rem;
@@ -399,6 +492,9 @@
   margin-top: 2.5rem;
   flex-wrap: wrap;
   gap: 1.5rem;
+  @include mobile {
+    flex-direction: column;
+  }
   &__card {
     display: flex;
     flex-direction: column;
@@ -407,6 +503,9 @@
     height: 100%;
     border: 1px solid $b-20;
     border-radius: 1rem;
+    @include mobile {
+      min-width: 100%;
+    }
   }
   &__card-img {
     width: 100%;
@@ -460,28 +559,52 @@
     flex-direction: column;
     align-items: center;
     color: $b-0;
+    @include mobile {
+      @include container-sm;
+    }
   }
   &__caption {
-    font-size: 3rem;
-    color: $b-0;
-    margin-top: 5rem;
-    text-align: center;
+    &--lg {
+      font-size: 3rem;
+      color: $b-0;
+      margin-top: 5rem;
+      text-align: center;
+    }
+    &--sm {
+      display: none;
+    }
+    @include mobile {
+      &--lg {
+        display: none;
+      }
+      &--sm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 2rem;
+        margin-top: 120px;
+      }
+    }
   }
   &__btn {
     display: flex;
     justify-content: center;
-    width: 188px;
     border-radius: 1rem;
     border: 1px solid $b-0;
-    padding: 1.25rem 2rem;
+    padding: 20px 32px 20px 40px;
     margin-top: 2.5rem;
     margin-bottom: 5rem;
     background-color: $b-100;
     color: $b-0;
-    gap: 1rem;
+    gap: 12px;
+    @include mobile {
+      margin-top: 2rem;
+      margin-bottom: 120px;
+    }
   }
   &__btn-text {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 900;
   }
   &__icon {
@@ -495,14 +618,26 @@
   border-top: 1px solid $b-0;
   border-bottom: 1px solid $b-0;
   padding: 5rem 0 3.5rem 0;
+  @include mobile {
+    margin-top: 20px;
+    padding-bottom: 80px;
+  }
   &__container {
     @include container;
     justify-content: space-between;
+    @include mobile {
+      @include container-sm;
+      flex-direction: column-reverse;
+    }
   }
+
   &__tabs {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    @include mobile {
+      margin-top: 2.5rem;
+    }
   }
 
   &__tab {
@@ -512,19 +647,43 @@
   &__logo {
     width: 188.99px;
     height: 40px;
+    @include mobile {
+      width: 244.99px;
+    }
   }
 }
 
 .footer {
   @include section;
   &__container {
-    @include container;
+    &--lg {
+      @include container;
+      justify-content: space-between;
+      margin: 1.5rem 0;
+      color: $b-0;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    &--sm {
+      display: none;
+    }
+    @include mobile {
+      &--lg {
+        display: none;
+      }
+      &--sm {
+        @include container-sm;
+        flex-direction: column;
+        margin: 1.5rem 0;
+        color: $b-0;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
+  &__container-sm {
+    display: flex;
     justify-content: space-between;
-    margin: 1.5rem 0;
-
-    color: $b-0;
-    font-size: 1rem;
-    font-weight: 700;
   }
   &__rights {
     padding: 1.25rem 5rem 1.25rem 0;
@@ -535,9 +694,15 @@
     justify-content: flex-start;
     flex: 2 0 auto;
     gap: 1.25rem;
+    @include mobile {
+      justify-content: flex-start;
+    }
   }
   &__tab {
     padding: 1.25rem;
+    @include mobile {
+      padding: 12px 0;
+    }
   }
   &__back {
     display: flex;
