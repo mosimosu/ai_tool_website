@@ -1,3 +1,9 @@
+@mixin mobile {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
 @mixin section {
   width: 100vw;
   height: auto;
@@ -11,4 +17,10 @@
   display: flex;
   justify-content: center;
   margin-bottom: 1.5rem;
+}
+
+@mixin container-sm {
+  width: 93.6%;
+  display: flex;
+  justify-content: center;
 }
