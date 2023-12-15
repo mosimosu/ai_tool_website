@@ -339,6 +339,7 @@
 .section-portfolio {
   @include section;
   background-color: $b-0;
+  color: $b-100;
   border-radius: 10rem;
   @include mobile {
     border-radius: 20px;
@@ -407,6 +408,7 @@
       margin-top: 1.5rem;
       display: flex;
       justify-content: space-between;
+      color: $b-100;
     }
     &--sm {
       display: none;
@@ -434,6 +436,7 @@
     padding: 1.25rem 2rem 1.25rem 2.5rem;
     border: 1px solid $b-20;
     border-radius: 1rem;
+    color: $b-100;
     gap: 1.5rem;
   }
   &__filter-text {
@@ -529,7 +532,6 @@
   }
   &__card-info {
     display: flex;
-
     font-size: $fs-m-1;
     color: $b-80;
   }
@@ -617,7 +619,11 @@
   @include section;
   border-top: 1px solid $b-0;
   border-bottom: 1px solid $b-0;
+  margin-top: 5rem;
   padding: 5rem 0 3.5rem 0;
+  &--mt10rem {
+    margin-top: 10rem;
+  }
   @include mobile {
     margin-top: 20px;
     padding-bottom: 80px;

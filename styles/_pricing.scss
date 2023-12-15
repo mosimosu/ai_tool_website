@@ -3,6 +3,9 @@
   &__container {
     @include container;
     flex-direction: column;
+    @include mobile {
+      @include container-sm;
+    }
   }
   &__row {
     display: flex;
@@ -12,7 +15,7 @@
     }
     &--2nd {
       justify-content: flex-end;
-      padding-left: 40%;
+      padding-left: 26%;
     }
     &--3rd {
       justify-content: flex-start;
@@ -21,29 +24,45 @@
   &__caption {
     font-size: 120px;
     font-weight: 900;
-    overflow-wrap: nowrap;
+    @include mobile {
+      font-size: 3rem;
+    }
   }
   &__text {
     font-size: 48px;
     font-weight: 900;
     margin-top: 5rem;
+    @include mobile {
+      font-size: 28px;
+    }
   }
   &__deco {
     display: flex;
     margin-top: 238px;
+    @include mobile {
+      margin-top: 11.25rem;
+      max-width: 100%;
+    }
   }
 }
 
 .section-pricing-sub {
   @include section;
   margin-top: 10rem;
+
   &__container {
     @include container;
     flex-direction: column;
+    @include mobile {
+      @include container-sm;
+    }
   }
   &__caption {
     font-size: 2rem;
     font-weight: 900;
+    @include mobile {
+      font-size: 20px;
+    }
   }
   &__cards {
     display: flex;
@@ -52,19 +71,32 @@
     flex-wrap: wrap;
     margin-top: 5rem;
     gap: 1.5rem;
+    @include mobile {
+      margin-top: 1.5rem;
+    }
   }
   &__card {
     min-width: 632px;
     border: 1px solid $b-0;
     border-radius: 1rem;
+    @include mobile {
+      min-width: 351px;
+    }
   }
   &__card-body {
     min-height: 254px;
     padding: 20px 32px 20px 32px;
     border-bottom: 1px solid $b-0;
+    @include mobile {
+      min-height: 176px;
+      gap: 12px;
+    }
   }
   &__card-caption {
     font-size: 2rem;
+    @include mobile {
+      font-size: 64px;
+    }
   }
   &__card-items {
     font-size: 1rem;
@@ -77,6 +109,10 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 32px 20px 32px;
+    @include mobile {
+      padding: 20px;
+      gap: 12px;
+    }
   }
   &__card-footer-price {
     font-size: 20px;
@@ -103,14 +139,25 @@
   &__container {
     @include container;
     justify-content: space-between;
+    flex-direction: column;
+    @include mobile {
+      @include container-sm;
+    }
   }
   &__caption {
     font-size: 2rem;
     font-weight: 900;
+    @include mobile {
+      font-size: 20px;
+    }
   }
   &__items {
     display: flex;
     flex-direction: column;
+    @include mobile {
+      margin-top: 48px;
+      gap: 1.5rem;
+    }
   }
   &__items-item {
     display: flex;
@@ -121,8 +168,64 @@
   &__item-title {
     font-size: 3rem;
     font-weight: 900;
+    @include mobile {
+      font-size: 32px;
+    }
   }
   &__item-text {
     font-size: 2rem;
+    @include mobile {
+      font-size: 1rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.section-problems {
+  @include section;
+  margin-top: 10rem;
+  &__container {
+    @include container;
+    justify-content: space-between;
+    @include mobile {
+      @include container-sm;
+      flex-direction: column;
+    }
+  }
+  &__caption {
+    font-size: 2rem;
+    font-weight: 900;
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 70%;
+    gap: 1rem;
+    @include mobile {
+      justify-content: center;
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+  }
+  &__item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 40px 20px 40px;
+    border: 1px solid $b-80;
+    border-radius: 1rem;
+    font-size: 20px;
+    font-weight: 900;
+    box-sizing: border-box;
+    @include mobile {
+      padding: 20px;
+    }
+  }
+  &__icon-add {
+    padding: 0;
   }
 }
