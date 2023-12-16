@@ -39,10 +39,23 @@
   &__deco {
     display: flex;
     margin-top: 238px;
+
     @include mobile {
       margin-top: 11.25rem;
       max-width: 100%;
     }
+  }
+  &__deco > li:nth-child(1) > img {
+    position: relative;
+    animation: moving-up 4s ease 1s infinite normal backwards;
+  }
+  &__deco > li:nth-child(2) > img {
+    position: relative;
+    animation: moving-up 4s ease 0.5s infinite normal backwards;
+  }
+  &__deco > li:nth-child(3) > img {
+    position: relative;
+    animation: moving-up 4s ease 0s infinite normal backwards;
   }
 }
 

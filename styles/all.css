@@ -287,10 +287,36 @@ table {
     max-width: 100%;
   }
 }
+.section-hero__deco > li:nth-child(3) > img {
+  position: relative;
+  animation: moving-up 4s ease 0s infinite normal backwards;
+}
+.section-hero__deco > li:nth-child(2) > img {
+  position: relative;
+  animation: moving-up 4s ease 0.5s infinite normal backwards;
+}
+.section-hero__deco > li:nth-child(1) > img {
+  position: relative;
+  animation: moving-up 4s ease 1s infinite normal backwards;
+}
 .section-hero__grace-img {
   max-width: 100%;
 }
 
+@keyframes moving-up {
+  0% {
+    top: 100px;
+    opacity: 0;
+  }
+  50% {
+    top: 0px;
+    opacity: 1;
+  }
+  100% {
+    top: -100px;
+    opacity: 0;
+  }
+}
 .section-strength {
   width: 100vw;
   height: auto;
@@ -1067,6 +1093,18 @@ table {
     margin-top: 11.25rem;
     max-width: 100%;
   }
+}
+.section-pricing-main__deco > li:nth-child(1) > img {
+  position: relative;
+  animation: moving-up 4s ease 1s infinite normal backwards;
+}
+.section-pricing-main__deco > li:nth-child(2) > img {
+  position: relative;
+  animation: moving-up 4s ease 0.5s infinite normal backwards;
+}
+.section-pricing-main__deco > li:nth-child(3) > img {
+  position: relative;
+  animation: moving-up 4s ease 0s infinite normal backwards;
 }
 
 .section-pricing-sub {
