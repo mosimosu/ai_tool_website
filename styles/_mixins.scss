@@ -28,18 +28,4 @@
 // animation
 
 @mixin ani_move-in {
-  @keyframes moving-up {
-    0% {
-      top: 100px;
-      opacity: 0;
-    }
-    50% {
-      top: 0px;
-      opacity: 1;
-    }
-    100% {
-      top: -100px;
-      opacity: 0;
-    }
-  }
 }

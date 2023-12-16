@@ -480,8 +480,27 @@ table {
 .section-review__partners-bar {
   display: flex;
   justify-content: center;
+  position: relative;
   width: 100%;
   height: 2.5rem;
+}
+.section-review__partners-bar::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  background-image: linear-gradient(to right, #020202, #020202, transparent, transparent, transparent, transparent, transparent, transparent, transparent);
+  opacity: 1;
+}
+.section-review__partners-bar::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  background-image: linear-gradient(to right, transparent, transparent, transparent, transparent, transparent, transparent, transparent, #020202, #020202);
+  opacity: 1;
 }
 @media screen and (max-width: 576px) {
   .section-review__partners-bar {
