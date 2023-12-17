@@ -140,6 +140,36 @@ table {
   border-spacing: 0;
 }
 
+@keyframes moving-up {
+  0% {
+    top: 100px;
+    opacity: 0;
+  }
+  50% {
+    top: 0px;
+    opacity: 1;
+  }
+  100% {
+    top: -100px;
+    opacity: 0;
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
 .bg-color {
   background-color: #020202;
 }
@@ -303,20 +333,6 @@ table {
   max-width: 100%;
 }
 
-@keyframes moving-up {
-  0% {
-    top: 100px;
-    opacity: 0;
-  }
-  50% {
-    top: 0px;
-    opacity: 1;
-  }
-  100% {
-    top: -100px;
-    opacity: 0;
-  }
-}
 .section-strength {
   width: 100vw;
   height: auto;
@@ -469,6 +485,13 @@ table {
   flex-direction: column;
   margin: 80px 0 160px 0;
   gap: 1.25rem;
+  overflow-x: hidden;
+}
+.section-review__partners li:nth-child(1) > div {
+  animation: slide-in 10s linear infinite;
+}
+.section-review__partners li:nth-child(2) > div {
+  animation: slide-out 10s linear infinite;
 }
 @media screen and (max-width: 576px) {
   .section-review__partners {
@@ -476,6 +499,13 @@ table {
     margin-bottom: 48px;
     gap: 0.875rem;
   }
+}
+.section-review__bar-img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 2.5rem;
 }
 .section-review__partners-bar {
   display: flex;
@@ -488,10 +518,11 @@ table {
   content: "";
   width: 100%;
   height: 100%;
-  left: 0;
+  left: 0px;
   position: absolute;
   background-image: linear-gradient(to right, #020202, #020202, transparent, transparent, transparent, transparent, transparent, transparent, transparent);
   opacity: 1;
+  z-index: 1;
 }
 .section-review__partners-bar::after {
   content: "";
@@ -790,6 +821,7 @@ table {
   height: 100%;
   border: 1px solid #f2f2f2;
   border-radius: 1rem;
+  overflow: hidden;
 }
 @media screen and (max-width: 576px) {
   .cards__card {
@@ -799,7 +831,6 @@ table {
 .cards__card-img {
   width: 100%;
   height: 312px;
-  border-radius: 1rem 1rem 0 0;
   transition: transform 0.5s;
 }
 .cards__card-img:hover {
