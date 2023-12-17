@@ -46,4 +46,12 @@
       transform: translateX(100%);
     }
   }
+  @keyframes slide-out-mobile {
+    from {
+      transform: translateX(-170%);
+    }
+    to {
+      transform: translateX(150%);
+    }
+  }
 }

@@ -156,6 +156,14 @@ table {
     transform: translateX(100%);
   }
 }
+@keyframes slide-out-mobile {
+  from {
+    transform: translateX(-170%);
+  }
+  to {
+    transform: translateX(150%);
+  }
+}
 @keyframes moving-up {
   0% {
     top: 100px;
@@ -549,10 +557,15 @@ table {
   gap: 1.25rem;
 }
 .section-review__partners li:nth-child(1) > div {
-  animation: slide-in 10s linear infinite;
+  animation: slide-in 15s linear infinite;
 }
 .section-review__partners li:nth-child(2) > div {
-  animation: slide-out 10s linear infinite;
+  animation: slide-out 15s linear infinite;
+}
+@media screen and (max-width: 576px) {
+  .section-review__partners li:nth-child(2) > div {
+    animation: slide-out-mobile 15s linear infinite;
+  }
 }
 @media screen and (max-width: 576px) {
   .section-review__partners {
