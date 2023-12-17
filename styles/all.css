@@ -593,7 +593,7 @@ table {
   content: "";
   width: 100%;
   height: 100%;
-  left: 0;
+  left: 0px;
   position: absolute;
   background-image: linear-gradient(to right, #020202, #020202, transparent, transparent, transparent, transparent, transparent, transparent, transparent);
   opacity: 1;
@@ -902,6 +902,7 @@ table {
   height: 100%;
   border: 1px solid #f2f2f2;
   border-radius: 1rem;
+  overflow: hidden;
 }
 @media screen and (max-width: 576px) {
   .cards__card {
@@ -911,7 +912,6 @@ table {
 .cards__card-img {
   width: 100%;
   height: 312px;
-  border-radius: 1rem 1rem 0 0;
   transition: transform 0.5s;
 }
 .cards__card-img:hover {
