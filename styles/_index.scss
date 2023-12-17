@@ -412,6 +412,7 @@
     justify-content: space-between;
     flex-direction: column;
     width: (100%/3);
+    background-color: rgba($color: $b-0, $alpha: 0.08);
     padding: 2.5rem;
     border-radius: 1rem;
   }
@@ -424,6 +425,8 @@
     height: 215px;
     @include mobile {
       height: auto;
+      max-width: 100%;
+      text-wrap: word-break;
     }
   }
   &__contact {
@@ -456,6 +459,9 @@
       justify-content: center;
       flex-direction: column;
       max-width: 100%;
+      border-radius: 1rem;
+      background-color: rgba($color: $b-0, $alpha: 0.08);
+      padding: 20px;
       color: $b-0;
     }
   }
