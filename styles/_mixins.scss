@@ -26,25 +26,6 @@
 }
 
 // animation
-<<<<<<< HEAD
-@mixin ani_moving-up {
-  @keyframes moving-up {
-    0% {
-      top: 100px;
-      opacity: 0;
-    }
-    50% {
-      top: 0px;
-      opacity: 1;
-    }
-    100% {
-      top: -100px;
-      opacity: 0;
-    }
-  }
-}
-=======
->>>>>>> update/pricing_rwd
 
 @mixin ani_slide-in {
   @keyframes slide-in {
@@ -56,10 +37,6 @@
     }
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> update/pricing_rwd
 @mixin ani_slide-out {
   @keyframes slide-out {
     from {
