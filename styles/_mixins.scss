@@ -26,6 +26,7 @@
 }
 
 // animation
+<<<<<<< HEAD
 @mixin ani_moving-up {
   @keyframes moving-up {
     0% {
@@ -42,6 +43,8 @@
     }
   }
 }
+=======
+>>>>>>> update/pricing_rwd
 
 @mixin ani_slide-in {
   @keyframes slide-in {
@@ -53,6 +56,10 @@
     }
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> update/pricing_rwd
 @mixin ani_slide-out {
   @keyframes slide-out {
     from {
