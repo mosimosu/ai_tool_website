@@ -25,6 +25,10 @@
     @include mobile {
       @include container-sm;
       justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0;
+      padding: 28px 0;
+      border-bottom: 1px solid $b-0;
     }
     justify-content: space-between;
   }
@@ -40,7 +44,6 @@
     gap: 1.5rem;
     width: 100%;
     color: $b-0;
-    gap: 1.5rem;
     @include mobile {
       display: none;
     }
@@ -54,9 +57,60 @@
     @include mobile {
       width: 40px;
       height: 40px;
-      margin: 1.2rem 0;
       display: block;
     }
+  }
+  &__burger-popup {
+    display: none;
+  }
+  input {
+    appearance: none;
+  }
+  input:checked ~ div {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+  }
+}
+
+.partial-nav {
+  @include section;
+  background-color: $b-100;
+  &__container {
+    @include container-sm;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 28px;
+    border-bottom: 1px solid $b-0;
+  }
+  &__banner-logo {
+    width: auto;
+    height: 40px;
+    margin: 1.2rem;
+  }
+  &__banner-close-btn {
+    width: 40px;
+    height: 40px;
+  }
+  &__items {
+    max-width: 100%;
+    font-size: 80px;
+    font-weight: 900;
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 192px 107px 296px 107px;
+    border-bottom: 1px solid $b-0;
   }
 }
 

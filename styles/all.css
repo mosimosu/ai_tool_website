@@ -195,6 +195,10 @@ table {
     display: flex;
     justify-content: center;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 28px 0;
+    border-bottom: 1px solid #ffffff;
   }
 }
 .section-nav__logo {
@@ -209,7 +213,6 @@ table {
   gap: 1.5rem;
   width: 100%;
   color: #ffffff;
-  gap: 1.5rem;
 }
 @media screen and (max-width: 576px) {
   .section-nav__tabs {
@@ -227,9 +230,68 @@ table {
   .section-nav__burger {
     width: 40px;
     height: 40px;
-    margin: 1.2rem 0;
     display: block;
   }
+}
+.section-nav__burger-popup {
+  display: none;
+}
+.section-nav input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.section-nav input:checked ~ div {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
+}
+
+.partial-nav {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #020202;
+}
+.partial-nav__container {
+  width: 93.6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.partial-nav__banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 28px;
+  border-bottom: 1px solid #ffffff;
+}
+.partial-nav__banner-logo {
+  width: auto;
+  height: 40px;
+  margin: 1.2rem;
+}
+.partial-nav__banner-close-btn {
+  width: 40px;
+  height: 40px;
+}
+.partial-nav__items {
+  max-width: 100%;
+  font-size: 80px;
+  font-weight: 900;
+  gap: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 192px 107px 296px 107px;
+  border-bottom: 1px solid #ffffff;
 }
 
 .section-hero {
