@@ -318,10 +318,13 @@
     margin: 80px 0 160px 0;
     gap: 1.25rem;
     & li:nth-child(1) > div {
-      animation: slide-in 10s linear infinite;
+      animation: slide-in 15s linear infinite;
     }
     & li:nth-child(2) > div {
-      animation: slide-out 10s linear infinite;
+      animation: slide-out 15s linear infinite;
+      @include mobile {
+        animation: slide-out-mobile 15s linear infinite;
+      }
     }
     @include mobile {
       margin-top: 1.5rem;
