@@ -78,7 +78,6 @@
 .partial-nav {
   @include section;
   background-color: $b-100;
-  height: 100vh;
   &__container {
     @include container-sm;
     justify-content: space-between;
