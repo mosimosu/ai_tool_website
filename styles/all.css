@@ -299,7 +299,9 @@ table {
   align-items: center;
   flex-direction: column;
   padding: 192px 107px 296px 107px;
-  border-bottom: 1px solid #ffffff;
+}
+.partial-nav__footer--line {
+  border-top: 1px solid #ffffff;
 }
 
 .section-hero {
@@ -460,6 +462,7 @@ table {
 }
 @media screen and (max-width: 576px) {
   .section-strength__caption--main {
+    width: 100%;
     font-size: 2rem;
     margin-top: 1.5rem;
   }
@@ -621,11 +624,21 @@ table {
   display: flex;
   justify-content: space-between;
   color: #ffffff;
-  width: 100%;
+  min-width: 100%;
   gap: 1.25rem;
 }
 @media screen and (max-width: 576px) {
   .section-review__cards {
+    box-sizing: border-box;
+    width: 93.6%;
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  .section-review__cards::-webkit-scrollbar {
     display: none;
   }
 }
@@ -637,6 +650,13 @@ table {
   background-color: rgba(255, 255, 255, 0.08);
   padding: 2.5rem;
   border-radius: 1rem;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 576px) {
+  .section-review__card {
+    min-width: 100%;
+    scroll-snap-align: center;
+  }
 }
 .section-review__star {
   width: 1rem;
@@ -678,21 +698,6 @@ table {
 .section-review__contact-co {
   font-size: 0.875rem;
 }
-.section-review__card-fake {
-  display: none;
-}
-@media screen and (max-width: 576px) {
-  .section-review__card-fake {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 100%;
-    border-radius: 1rem;
-    background-color: rgba(255, 255, 255, 0.08);
-    padding: 20px;
-    color: #ffffff;
-  }
-}
 .section-review__card-dots {
   display: none;
 }
@@ -704,16 +709,16 @@ table {
     gap: 8px;
   }
 }
-.section-review__card-dot {
+.section-review__card-dot a {
+  display: inline-block;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: #ffffff;
   opacity: 20%;
 }
-.section-review__card-dot--active {
-  background-color: #ffffff;
-  opacity: 1;
+.section-review__card-dot a:hover {
+  transform: scale(2);
 }
 
 .section-portfolio {
@@ -848,7 +853,10 @@ table {
     align-items: flex-start;
     gap: 0.5rem;
     text-wrap: nowrap;
-    overflow: hidden;
+    overflow: scroll;
+  }
+  .section-portfolio__genre::-webkit-scrollbar {
+    display: none;
   }
 }
 .section-portfolio__genre-option {
@@ -1180,6 +1188,7 @@ table {
     width: 93.6%;
     display: flex;
     justify-content: center;
+    margin-top: 40px;
   }
 }
 .section-pricing-main__row {
@@ -1259,6 +1268,7 @@ table {
     width: 93.6%;
     display: flex;
     justify-content: center;
+    max-width: 93.6%;
   }
 }
 .section-pricing-sub__caption {
@@ -1280,17 +1290,20 @@ table {
 }
 @media screen and (max-width: 576px) {
   .section-pricing-sub__cards {
+    box-sizing: border-box;
+    max-width: 100%;
     margin-top: 1.5rem;
   }
 }
 .section-pricing-sub__card {
-  min-width: 632px;
+  width: 100%;
   border: 1px solid #ffffff;
   border-radius: 1rem;
 }
 @media screen and (max-width: 576px) {
   .section-pricing-sub__card {
-    min-width: 351px;
+    box-sizing: border-box;
+    max-width: 100%;
   }
 }
 .section-pricing-sub__card-body {

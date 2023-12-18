@@ -110,7 +110,9 @@
     align-items: center;
     flex-direction: column;
     padding: 192px 107px 296px 107px;
-    border-bottom: 1px solid $b-0;
+  }
+  &__footer--line {
+    border-top: 1px solid $b-0;
   }
 }
 
@@ -233,6 +235,7 @@
       width: 60%;
       font-size: $fs-7;
       @include mobile {
+        width: 100%;
         font-size: $fs-5;
         margin-top: 1.5rem;
       }
@@ -401,10 +404,18 @@
     display: flex;
     justify-content: space-between;
     color: $b-0;
-    width: 100%;
+    min-width: 100%;
     gap: 1.25rem;
     @include mobile {
-      display: none;
+      box-sizing: border-box;
+      @include container-sm;
+      justify-content: flex-start;
+      overflow: scroll;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
   &__card {
@@ -415,6 +426,12 @@
     background-color: rgba($color: $b-0, $alpha: 0.08);
     padding: 2.5rem;
     border-radius: 1rem;
+    box-sizing: border-box;
+    @include mobile {
+      min-width: 100%;
+
+      scroll-snap-align: center;
+    }
   }
   &__star {
     width: 1rem;
@@ -452,19 +469,6 @@
   &__contact-co {
     font-size: $fs-m-1;
   }
-  &__card-fake {
-    display: none;
-    @include mobile {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      max-width: 100%;
-      border-radius: 1rem;
-      background-color: rgba($color: $b-0, $alpha: 0.08);
-      padding: 20px;
-      color: $b-0;
-    }
-  }
   &__card-dots {
     display: none;
     @include mobile {
@@ -474,15 +478,15 @@
       gap: 8px;
     }
   }
-  &__card-dot {
+  &__card-dot a {
+    display: inline-block;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: $b-0;
     opacity: 20%;
-    &--active {
-      background-color: $b-0;
-      opacity: 1;
+    &:hover {
+      transform: scale(2);
     }
   }
 }
@@ -605,7 +609,10 @@
       align-items: flex-start;
       gap: 0.5rem;
       text-wrap: nowrap;
-      overflow: hidden;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
   &__genre-option {

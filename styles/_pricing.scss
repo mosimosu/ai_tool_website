@@ -5,6 +5,7 @@
     flex-direction: column;
     @include mobile {
       @include container-sm;
+      margin-top: 40px;
     }
   }
   &__row {
@@ -68,6 +69,7 @@
     flex-direction: column;
     @include mobile {
       @include container-sm;
+      max-width: 93.6%;
     }
   }
   &__caption {
@@ -85,15 +87,18 @@
     margin-top: 5rem;
     gap: 1.5rem;
     @include mobile {
+      box-sizing: border-box;
+      max-width: 100%;
       margin-top: 1.5rem;
     }
   }
   &__card {
-    min-width: 632px;
+    width: 100%;
     border: 1px solid $b-0;
     border-radius: 1rem;
     @include mobile {
-      min-width: 351px;
+      box-sizing: border-box;
+      max-width: 100%;
     }
   }
   &__card-body {
