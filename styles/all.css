@@ -243,6 +243,7 @@ table {
 }
 .section-nav__burger-popup {
   display: none;
+  position: fixed;
 }
 .section-nav input {
   -webkit-appearance: none;
@@ -251,7 +252,6 @@ table {
 }
 .section-nav input:checked ~ div {
   display: block;
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 15;
@@ -264,13 +264,17 @@ table {
   justify-content: center;
   align-items: center;
   background-color: #020202;
+  height: 100vh;
 }
 .partial-nav__container {
   width: 93.6%;
   display: flex;
   justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
+  height: 100vh;
 }
 .partial-nav__banner {
   display: flex;
@@ -290,15 +294,14 @@ table {
   height: 40px;
 }
 .partial-nav__items {
+  box-sizing: border-box;
   max-width: 100%;
   font-size: 80px;
   font-weight: 900;
   gap: 8px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   flex-direction: column;
-  padding: 192px 107px 296px 107px;
 }
 .partial-nav__footer--line {
   border-top: 1px solid #ffffff;
